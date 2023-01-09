@@ -1,0 +1,16 @@
+[  
+    {    
+        "nom": "Histoire-Géo",    
+        "nbQuestions": 30  
+    }, 
+    [
+        {
+            "nom": "Question 1",
+            "question": "De quelle couleur était le cheval blanc d'Henri 4 ?",
+            "réponse1": "Blanc",
+            "réponse2": "Bleu",
+            "réponse3": "Vert",
+            "réponse4": "Gris"
+        }
+    ]
+]
