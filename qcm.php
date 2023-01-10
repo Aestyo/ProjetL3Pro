@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/pally.css">
 </head>
 
-<button onClick="load_question()">Test</button>
+<button onClick="load_question()">ChargerQuestion</button><button onClick="display_question()">QuestionSuivante</button>
 
 <body>
     <nav>

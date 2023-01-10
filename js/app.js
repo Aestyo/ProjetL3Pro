@@ -1,14 +1,22 @@
 async function load_question(){
-    let questions;
-    await readJSON("questions/histoire-geo.json").then(data => { 
-        questions = data;
-        console.log(data);        
-    }).catch(error => {
-        console.log(error);
-    });
+    let questions = Array();
+    //questions = sessionStorage.getItem('questions');
+    if(true){
+        await readJSON("questions/histoire-geo.json").then(data => {
 
-    console.log(questions);
+            for(let i = 0; i < 3; i++){
+                nombre_question = data[1].length;
+                let random = Math.floor(Math.random() * nombre_question);
+                questions.push(data[1].splice(random, 1));
+            }
+            sessionStorage.setItem('questions', data);      
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+}
 
+function display_question(questions){
     const question = document.getElementById('question');
     const reponse1 = document.getElementById('reponse1');
     const reponse2 = document.getElementById('reponse2');
