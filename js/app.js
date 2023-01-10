@@ -1,17 +1,26 @@
+/**
+ * 
+ *  Cette fonction commence par regarder dans le cache de la session si une liste de question est trouvée
+ *  Si oui, elle ne fait rien d'autre
+ *  Si non, elle lis le fichier "questions/histoire-geo.json" et sélectionne 3 questions au hasard et les stocke dans le cache
+ *  
+ * */
 async function load_question(){
-    let questions = Array();
-    //questions = sessionStorage.getItem('questions');
-    if(true){
+
+    let questions = JSON.parse(sessionStorage.getItem('questions')); // On vérifie si les questions sont dans le cache
+    
+    if(questions == null){
         await readJSON("questions/histoire-geo.json").then(data => {
 
+            // Ici on choisis aléatoirement 3 questions parmis la liste lue dans le JSON
+            questions = Array();
             for(let i = 0; i < 3; i++){
-                nombre_question = data[1].length;
-                let random = Math.floor(Math.random() * nombre_question);
-                questions.push(data[1].splice(random, 1));
+                questions.push(data[1].splice(Math.floor(Math.random() * data[1].length), 1));
             }
-            sessionStorage.setItem('questions', data);      
+            sessionStorage.setItem('questions', JSON.stringify(questions));
+            
         }).catch(error => {
-            console.log(error);
+            console.log(error); // Si jamais il y a une erreur dans le fichier JSON, on atterit ici
         });
     }
 }
@@ -32,6 +41,10 @@ async function  display_question(){
     reponse2.innerHTML = questions[0].reponse2
     reponse3.innerHTML = questions[0].reponse3
     reponse4.innerHTML = questions[0].reponse4
+}
+
+async function  clear_cache(){
+    sessionStorage.setItem('questions', null);
 }
 
 function readJSON(file) {
