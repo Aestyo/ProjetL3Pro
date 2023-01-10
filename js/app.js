@@ -87,9 +87,44 @@ function return_math_questions()
                     break;    
             }
 
-    //questions.push({'question':question,'reponse':reponse});
-    questions.push([question,reponse]);
-    }
-return questions;
+    // questions.push({'question':question,'reponse':reponse});
+    questions.push({nombre1:nombre1,operation:operation,nombre2:nombre2,reponse:reponse})
+   
+    // questions.push([question,reponse]);
 
+    // questions.push([nombre1,operation,nombre2,reponse]);
+
+    }
+   return questions;
+
+}
+
+
+var arrayOfQuestionObjects =return_math_questions();
+
+
+function display_math_question(arrayOfQuestionObjects){
+
+    const nombre1 = document.getElementById('nombre1');
+    const nombre2 = document.getElementById('nombre2');
+    const operation = document.getElementById('operation');
+
+    for (var i = 0; i < arrayOfQuestionObjects.length; i++)
+     {
+
+      nombre1.innerHTML= arrayOfQuestionObjects[i].nombre1;
+      nombre2.innerHTML= arrayOfQuestionObjects[i].nombre2;
+      operation.innerHTML= arrayOfQuestionObjects[i].operation;
+
+     }
+
+     //ou 
+
+     /* 
+     nombre1.innerHTML= arrayOfQuestionObjects[0].nombre1;
+     nombre2.innerHTML= arrayOfQuestionObjects[0].nombre2;
+     operation.innerHTML= arrayOfQuestionObjects[0].operation;
+     */
+
+   
 }
