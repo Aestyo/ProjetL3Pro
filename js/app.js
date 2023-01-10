@@ -16,7 +16,10 @@ async function load_question(){
     }
 }
 
-function display_question(questions){
+async function  display_question(){
+    questions = await sessionStorage.getItem('questions');  
+    console.log(questions); 
+
     const question = document.getElementById('question');
     const reponse1 = document.getElementById('reponse1');
     const reponse2 = document.getElementById('reponse2');
@@ -24,11 +27,11 @@ function display_question(questions){
     const reponse4 = document.getElementById('reponse4'); 
 
 
-    question.innerHTML = questions[1][0].question
-    reponse1.innerHTML = questions[1][0].reponse1
-    reponse2.innerHTML = questions[1][0].reponse2
-    reponse3.innerHTML = questions[1][0].reponse3
-    reponse4.innerHTML = questions[1][0].reponse4
+    question.innerHTML = questions[0][0].question
+    reponse1.innerHTML = questions[0].reponse1
+    reponse2.innerHTML = questions[0].reponse2
+    reponse3.innerHTML = questions[0].reponse3
+    reponse4.innerHTML = questions[0].reponse4
 }
 
 function readJSON(file) {
