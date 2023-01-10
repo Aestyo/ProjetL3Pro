@@ -8,7 +8,7 @@
 async function load_question(){
 
     let questions = JSON.parse(sessionStorage.getItem('questions')); // On vérifie si les questions sont dans le cache
-    
+
     if(questions == null){
         await readJSON("questions/histoire-geo.json").then(data => {
 
@@ -23,10 +23,18 @@ async function load_question(){
             console.log(error); // Si jamais il y a une erreur dans le fichier JSON, on atterit ici
         });
     }
+    return questions;
 }
 
-async function  display_question(){
-    questions = await sessionStorage.getItem('questions');  
+/**
+ * 
+ *  Cette fonction récupère les questions depuis le cache,
+ *  Ensuite elle modifie les éléments de la page QCM pour correspondre aux éléments de la question
+ *  liée à l'itération actuelle
+ *  
+ * */
+async function  displayQCM(){
+    let questions = await load_question();
     console.log(questions); 
 
     const question = document.getElementById('question');
@@ -37,10 +45,10 @@ async function  display_question(){
 
 
     question.innerHTML = questions[0][0].question
-    reponse1.innerHTML = questions[0].reponse1
-    reponse2.innerHTML = questions[0].reponse2
-    reponse3.innerHTML = questions[0].reponse3
-    reponse4.innerHTML = questions[0].reponse4
+    reponse1.innerHTML = questions[0][0].reponse1
+    reponse2.innerHTML = questions[0][0].reponse2
+    reponse3.innerHTML = questions[0][0].reponse3
+    reponse4.innerHTML = questions[0][0].reponse4
 }
 
 async function  clear_cache(){
