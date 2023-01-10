@@ -37,18 +37,25 @@ async function  displayQCM(){
     let questions = await load_question();
     console.log(questions); 
 
-    const question = document.getElementById('question');
-    const reponse1 = document.getElementById('reponse1');
-    const reponse2 = document.getElementById('reponse2');
-    const reponse3 = document.getElementById('reponse3');
-    const reponse4 = document.getElementById('reponse4'); 
+    const txt = document.getElementById('question');
+    const case1 = document.getElementById('reponse1');
+    const case2 = document.getElementById('reponse2');
+    const case3 = document.getElementById('reponse3');
+    const case4 = document.getElementById('reponse4'); 
 
-
-    question.innerHTML = questions[0][0].question
-    reponse1.innerHTML = questions[0][0].reponse1
-    reponse2.innerHTML = questions[0][0].reponse2
-    reponse3.innerHTML = questions[0][0].reponse3
-    reponse4.innerHTML = questions[0][0].reponse4
+    questions.forEach(async qt => {
+        console.log(qt);
+        txt.innerHTML = qt[0].question
+        case1.innerHTML = qt[0].reponse1
+        case2.innerHTML = qt[0].reponse2
+        case3.innerHTML = qt[0].reponse3
+        case4.innerHTML = qt[0].reponse4
+        await new Promise(resolve => case1.addEventListener("click", function() {
+            console.log("bouton cliqué!");
+            resolve();
+        }));
+        
+    })
 }
 
 async function  clear_cache(){
