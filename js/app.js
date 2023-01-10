@@ -44,3 +44,52 @@ function readJSON(file) {
         rawFile.send(null);
     });
 }
+
+
+// Ajouté par Espoir
+
+//Faire une fonction qui ne prend rien en paramètres et qui retourne un tableau de  4 questions opérations élémentaire avec leur réponse
+
+function return_math_questions()
+{
+    let questions=Array();
+    let operations=['+','-','*','/'];
+
+    for(var i=0;i<4;i++){
+
+            let nombre1=Math.floor(Math.random() * 10) +1;
+            let nombre2=Math.floor(Math.random() * 10) +1;
+        
+            //on choisit aléatoirement une opération
+
+            let operation=operations[Math.floor(Math.random()*operations.length)];
+
+            let question;
+            let reponse;
+
+            switch(operation)
+            {
+                case '+':
+                    question=nombre1 +'+' +nombre2;
+                    reponse=nombre1+nombre2;
+                    break;
+                case '-':
+                    question=nombre1 +'-' +nombre2;
+                    reponse=nombre1-nombre2;
+                    break;
+                case '*':
+                    question=nombre1 +'*' +nombre2;
+                    reponse=nombre1*nombre2;
+                    break;
+                case '/':
+                    question=nombre1 +'/' +nombre2;
+                    reponse= Math.floor(nombre1/nombre2);
+                    break;    
+            }
+
+    //questions.push({'question':question,'reponse':reponse});
+    questions.push([question,reponse]);
+    }
+return questions;
+
+}
