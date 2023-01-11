@@ -13,7 +13,7 @@ if (is_null($questions)) {
     $questions = array();
 
     // On choisit aléatoirement 3 questions parmi les données lues dans le fichier JSON
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < 10; $i++) {
         //Choisir un index aléatoire
         $random_index = array_rand($data[1]);
 
@@ -99,7 +99,7 @@ echo $bonne_reponse;
                 </div>
                 <div class="ligne ligne3">
                     <?php
-                    if ($iteration < 2) echo "<button type='submit' id='jeReponds'>Je réponds !</button>";
+                    if ($iteration < 9) echo "<button type='submit' id='jeReponds'>Je réponds !</button>";
                     else echo "<button type='submit' id='jeReponds'>Fin !</button>";
                     ?>
                 </div>
