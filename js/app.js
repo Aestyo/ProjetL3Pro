@@ -35,27 +35,28 @@ async function load_question(){
  * */
 async function  displayQCM(){
     let questions = await load_question();
-    console.log(questions); 
 
     const txt = document.getElementById('question');
+    const button = document.getElementById("jeReponds")
     const case1 = document.getElementById('reponse1');
     const case2 = document.getElementById('reponse2');
     const case3 = document.getElementById('reponse3');
     const case4 = document.getElementById('reponse4'); 
 
-    questions.forEach(async qt => {
-        console.log(qt);
-        txt.innerHTML = qt[0].question
-        case1.innerHTML = qt[0].reponse1
-        case2.innerHTML = qt[0].reponse2
-        case3.innerHTML = qt[0].reponse3
-        case4.innerHTML = qt[0].reponse4
-        await new Promise(resolve => case1.addEventListener("click", function() {
-            console.log("bouton cliqué!");
-            resolve();
-        }));
-        
-    })
+    async function waitForButtonClick() {
+        return new Promise((resolve) => {
+            button.addEventListener("click", resolve);
+        });
+    }
+
+    for(let i = 0; i < 3; i++) {
+        txt.innerHTML = questions[i][0].question
+        case1.innerHTML = questions[i][0].reponse1
+        case2.innerHTML = questions[i][0].reponse2
+        case3.innerHTML = questions[i][0].reponse3
+        case4.innerHTML = questions[i][0].reponse4
+        await waitForButtonClick();
+    }
 }
 
 async function  clear_cache(){
