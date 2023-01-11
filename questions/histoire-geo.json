@@ -6,38 +6,38 @@
     [
         {
             "question": "De quelle couleur était le cheval blanc d'Henri 4 ?",
-            "1": "Blanc",
-            "2": "Bleu",
-            "3": "Vert",
-            "4": "Gris"
+            "reponse1": "Blanc",
+            "reponse2": "Bleu",
+            "reponse3": "Vert",
+            "reponse4": "Gris"
         },
         {
             "question": "Qu'est-ce que je fais ici ?",
-            "1": "Rien",
-            "2": "9",
-            "3": "La réponse D",
-            "4": "La vraie réponse D"
+            "reponse1": "Rien",
+            "reponse2": "9",
+            "reponse3": "La réponse D",
+            "reponse4": "La vraie réponse D"
         },
         {
-            "question": "De kel couleur est le ciel ?",
-            "1": "Pas bleu",
-            "2": "Bleu",
-            "3": "Pas bleu",
-            "4": "Pas bleu"
+            "question": "De quelle couleur est le ciel ?",
+            "reponse1": "Pas bleu du tout",
+            "reponse2": "Bleu",
+            "reponse3": "Pas vraiment bleu",
+            "reponse4": "Pas bleu"
         },
         {
             "question": "Est-ce que Guillaume est un doggo ?",
-            "1": "Oui",
-            "2": "Oui",
-            "3": "Oui",
-            "4": "Oui"
+            "reponse1": "OUI !",
+            "reponse2": "Oui",
+            "reponse3": "Oui",
+            "reponse4": "Oui"
         },
         {
-            "question": "Qu'elle température fait-il ?",
-            "1": "1°C",
-            "2": "-59°C",
-            "3": "112°C",
-            "4": "19°C"
+            "question": "Quelle température fait-il ?",
+            "reponse1": "19°C",
+            "reponse2": "-59°C",
+            "reponse3": "112°C",
+            "reponse4": "1°C"
         }
     ]
 ]

@@ -39,11 +39,11 @@ if (is_null($iteration) || $iteration >= 10) {
 }
 echo $iteration;
 
-$rand = array("1", "2", "3", "4");
-shuffle($rand);
+$bonne_reponse = $questions[$iteration]->reponse1;
+$question_array = array($questions[$iteration]->reponse1, $questions[$iteration]->reponse2, $questions[$iteration]->reponse3, $questions[$iteration]->reponse4);
+shuffle($question_array);
 
-print_r($questions[$iteration]);
-// echo $questions[0][1];
+echo $bonne_reponse;
 ?>
 
 <!DOCTYPE html>
@@ -89,13 +89,13 @@ print_r($questions[$iteration]);
         <div class="choixMultiple">
             <form action="#" method="post">
                 <div class="ligne ligne1">
-                    <?php echo "<button class='reponseM' id='", $rand[0], "'>", $questions[$iteration]->reponse1, "</button>"; ?>
-                    <?php echo "<button class='reponseM' id='", $rand[1], "'>", $questions[$iteration]->reponse2, "</button>"; ?>
+                    <?php echo "<button class='reponseM' id='0'>", $question_array[0], "</button>"; ?>
+                    <?php echo "<button class='reponseM' id='1'>", $question_array[1], "</button>"; ?>
                 </div>
                 <br>
                 <div class="ligne ligne2">
-                    <?php echo "<button class='reponseM' id='", $rand[2], "'>", $questions[$iteration]->reponse3, "</button>"; ?>
-                    <?php echo "<button class='reponseM' id='", $rand[3], "'>", $questions[$iteration]->reponse4, "</button>"; ?>
+                    <?php echo "<button class='reponseM' id='2'>", $question_array[2], "</button>"; ?>
+                    <?php echo "<button class='reponseM' id='3'>", $question_array[3], "</button>"; ?>
                 </div>
                 <div class="ligne ligne3">
                     <?php
