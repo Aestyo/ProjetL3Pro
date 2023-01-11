@@ -83,16 +83,19 @@
         <div class="choixMultiple">
             <form action="#" method="post">
                 <div class="ligne ligne1">
-                    <button class="reponseM" id="reponse1"><?php echo $questions[$iteration]->reponse1 ?></button>
-                    <button class="reponseM" id="reponse2"><?php echo $questions[$iteration]->reponse2 ?></button>
+                    <?php echo "<button class='reponseM' id='reponse1'>", $questions[$iteration]->reponse1, "</button>"; ?>
+                    <?php echo "<button class='reponseM' id='reponse2'>", $questions[$iteration]->reponse1, "</button>"; ?>
                 </div>
                 <br>
                 <div class="ligne ligne2">
-                    <button class="reponseM" id="reponse3"><?php echo $questions[$iteration]->reponse3 ?></button>
-                    <button class="reponseM" id="reponse4"><?php echo $questions[$iteration]->reponse4 ?></button>
+                    <?php echo "<button class='reponseM' id='reponse3'>", $questions[$iteration]->reponse1, "</button>"; ?>
+                    <?php echo "<button class='reponseM' id='reponse4'>", $questions[$iteration]->reponse1, "</button>"; ?>
                 </div>
                 <div class="ligne ligne3">
-                    <button type="submit" id="jeReponds">Je réponds !</button>
+                    <?php 
+                        if($iteration < 2) echo "<button type='submit' id='jeReponds'>Je réponds !</button>";
+                        else echo "<button type='submit' id='jeReponds'>Fin !</button>";
+                    ?>
                 </div>
             </form>
         </div>
