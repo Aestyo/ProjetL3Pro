@@ -1,49 +1,44 @@
 <?php
 session_start();
 
-//Vérifie si les questions sont déjà dans la session
-$questions = json_decode($_SESSION['questions']);
-
-if (is_null($questions)) {
-    //Si les questions ne sont pas dans la session, on lit le fichier JSON
+//On vérifie si les questions sont déjà dans la session, sinon on lit le fichier JSON
+if (!isset($_SESSION['questions'])) {
     $json = file_get_contents("questions/histoire-geo.json");
     $data = json_decode($json, true);
 
-    //Initialise le tableau de questions
+    //On initialise le tableau de questions
     $questions = array();
 
-    // On choisit aléatoirement 3 questions parmi les données lues dans le fichier JSON
-    for ($i = 0; $i < 10; $i++) {
-        //Choisir un index aléatoire
-        $random_index = array_rand($data[1]);
-
-        //ajoute la question choisie au tableau de questions
-        $questions[] = $data[1][$random_index];
-
-        //supprime la question choisie de l'array $data[1]
-        unset($data[1][$random_index]);
+    //On choisit aléatoirement 10 questions parmi les données lues dans le fichier JSON
+    $random_indexes = array_rand($data[1], 10);
+    foreach ($random_indexes as $index) {
+        $questions[] = $data[1][$index];
     }
-    //stocke les questions choisies dans la session
+
+    //On stocke les questions choisies dans la session
     $_SESSION['questions'] = json_encode($questions);
 }
 
+//On récupère les questions depuis la session
 $questions = json_decode($_SESSION['questions']);
 
-$iteration = $_SESSION['iteration'];
-if (is_null($iteration) || $iteration >= 10) {
-    $_SESSION['iteration'] = 0;
-    $iteration = 0;
-} else {
-    $iteration = $iteration + 1;
-    $_SESSION['iteration'] = $iteration;
-}
-echo $iteration;
+//On récupère l'itération actuelle depuis la session, on la remet à 0 si on a atteint la fin des questions
+$iteration = isset($_SESSION['iteration']) ? $_SESSION['iteration'] : 0;
+$iteration = $iteration >= 10 ? 0 : $iteration;
 
+//On récupère la bonne réponse pour la question en cours d'itération
 $bonne_reponse = $questions[$iteration]->reponse1;
+$_SESSION['bonne_reponse'] = $bonne_reponse;
+
+//On crée un tableau avec les réponses possibles à la question en cours d'itération
+//et on le mélange
 $question_array = array($questions[$iteration]->reponse1, $questions[$iteration]->reponse2, $questions[$iteration]->reponse3, $questions[$iteration]->reponse4);
 shuffle($question_array);
 
-echo $bonne_reponse;
+//On stocke la nouvelle itération
+$_SESSION['iteration'] = $iteration + 1;
+
+echo $iteration;
 ?>
 
 <!DOCTYPE html>
