@@ -15,8 +15,8 @@
             "question": "Qu'est-ce que je fais ici ?",
             "reponse1": "Rien",
             "reponse2": "9",
-            "reponse3": "La réponse D",
-            "reponse4": "La vraie réponse D"
+            "reponse3": "La reponse1 D",
+            "reponse4": "La vraie reponse1 D"
         },
         {
             "question": "De qu'elle couleur est le ciel ?",

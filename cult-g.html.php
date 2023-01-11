@@ -1,8 +1,9 @@
 <?php
-    $data = json_decode(file_get_contents('questions/histoire-geo.json'), true);
+    $data = json_decode(file_get_contents('questions/culture-g.json'), true);
     if(json_last_error() != JSON_ERROR_NONE){
         throw new Exception("Error when decoding the json ".json_last_error_msg());
-    }    
+    }
+    include 'nav.html.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,30 +14,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/app.js"></script>
+    <script src="js/cult-g.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pally.css">
 </head>
 
-<button onClick="load_question()">ChargerQuestion</button><button onClick="display_question()">QuestionSuivante</button>
-
+<button onClick="ChargementQuestionReponses()">ChargerQuestion</button> <button onClick="displayQCM()">QuestionSuivante</button><button onClick="clear_cache()">Clear</button>
 <body>
-    <nav>
+    <!-- <nav>
         <ul>
-            <a href="question_ouverte.html">
+            <a href="mathematique.html.php">
                 <li>Mathématiques</li>
             </a>
-            <a href="image.html">
+            <a href="histoire-geo.html.php">
                 <li>Histoire-Géographie</li>
             </a>
-            <a href="qcm.html">
+            <a href="cult-g.html.php">
                 <li>Culture Générale</li>
             </a>
             <a href="#">
                 <li>Gérer les questions</li>
             </a>
         </ul>
-    </nav>
+    </nav> -->
 
     <div class="main">
         <div class="question">

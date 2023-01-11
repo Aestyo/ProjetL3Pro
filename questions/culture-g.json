@@ -1,43 +1,43 @@
 [  
     {    
-        "nom": "Histoire-Géo",    
+        "nom": "Culture-g",    
         "nbQuestions": 30  
     }, 
     [
         {
-            "question": "De quelle couleur était le cheval blanc d'Henri 4 ?",
-            "reponse1": "Blanc",
-            "reponse2": "Bleu",
-            "reponse3": "Vert",
-            "reponse4": "Gris"
+            "question": "Il est quelle l'heure ?",
+            "reponse1": "Il est 7 H 20",
+            "reponse2": "Il est 19 H 20",
+            "reponse3": "Il est 21 H 20",
+            "reponse4": "Il est 5 H 20"
         },
         {
-            "question": "Qu'est-ce que je fais ici ?",
-            "reponse1": "Rien",
-            "reponse2": "9",
-            "reponse3": "La réponse D",
-            "reponse4": "La vraie réponse D"
+            "question": "Combien y a-t-il de minutes dans une heure ?",
+            "reponse1": "60 minutes",
+            "reponse2": "100 minutes",
+            "reponse3": "150 minutes",
+            "reponse4": "75 minutes"
         },
         {
-            "question": "De qu'elle couleur est le ciel ?",
-            "reponse1": "Pas bleu",
-            "reponse2": "Bleu",
-            "reponse3": "Pas bleu",
-            "reponse4": "Pas bleu"
+            "question": "Quel est le synonyme de joyeux ?",
+            "reponse1": "Heureux",
+            "reponse2": "Mécontent",
+            "reponse3": "Apeurer",
+            "reponse4": "Triste"
         },
         {
-            "question": "Est-ce que Guillaume est un doggo ?",
-            "reponse1": "Oui",
-            "reponse2": "Oui",
-            "reponse3": "Oui",
-            "reponse4": "Oui"
+            "question": "Quelles sont les parties du corps humain ?",
+            "reponse1": "Le tronc, les jambes et les pieds, les bras et les mains, et la tête",
+            "reponse2": "Les bras et les mains, et la tête",
+            "reponse3": "Les jambes et les pieds, les bras et les mains, et la tête",
+            "reponse4": "Le tronc, les bras et les mains, et la tête"
         },
         {
-            "question": "Qu'elle température fait-il ?",
-            "reponse1": "1°C",
-            "reponse2": "-59°C",
-            "reponse3": "112°C",
-            "reponse4": "19°C"
+            "question": "Comment s'appellent les animaux qui ont un squelette articulé ?",
+            "reponse1": " Des vertébrés",
+            "reponse2": "Des ovipares",
+            "reponse3": "Les vivipares",
+            "reponse4": "Pauvre"
         }
     ]
 ]
