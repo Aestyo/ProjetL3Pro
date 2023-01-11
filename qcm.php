@@ -27,6 +27,8 @@
         $_SESSION['questions'] = json_encode($questions);
     }
 
+    $questions = json_decode($_SESSION['questions']);
+
     $iteration = $_SESSION['iteration'];
     if(is_null($iteration) || $iteration >= 10){
         $_SESSION['iteration'] = 0;
@@ -35,7 +37,7 @@
         $iteration = $iteration + 1;
         $_SESSION['iteration'] = $iteration;
     }
-    echo $iteration
+    echo $iteration;
 ?>
 
 <!DOCTYPE html>
