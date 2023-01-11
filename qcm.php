@@ -1,8 +1,38 @@
 <?php
-    $data = json_decode(file_get_contents('questions/histoire-geo.json'), true);
-    if(json_last_error() != JSON_ERROR_NONE){
-        throw new Exception("Error when decoding the json ".json_last_error_msg());
-    }    
+    session_start();
+
+    //Fonction pour charger des questions depuis un fichier JSON
+    function load_question(){
+        //Vérifie si les questions sont déjà dans la session
+        $questions = json_decode($_SESSION['questions']);
+        
+        if(is_null($questions)){
+            //Si les questions ne sont pas dans la session, on lit le fichier JSON
+            $json = file_get_contents("questions/histoire-geo.json");
+            $data = json_decode($json, true);
+
+            //Initialise le tableau de questions
+            $questions = array();
+            
+            // On choisit aléatoirement 3 questions parmi les données lues dans le fichier JSON
+            for($i = 0; $i < 3; $i++){
+                //Choisir un index aléatoire
+                $random_index = array_rand($data[1]);
+                
+                //ajoute la question choisie au tableau de questions
+                $questions[] = $data[1][$random_index];
+                
+                //supprime la question choisie de l'array $data[1]
+                unset($data[1][$random_index]);
+            }
+            //stocke les questions choisies dans la session
+            $_SESSION['questions'] = json_encode($questions);
+        }
+        //Retourne les questions
+        return $questions;
+    }
+
+    print_r(load_question());
 ?>
 
 <!DOCTYPE html>
