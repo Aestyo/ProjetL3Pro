@@ -1,6 +1,27 @@
 <?php 
     session_start();
-    session_unset();
+    if(isset($_POST['bouton'])){
+        $_SESSION["categorie"] = $_POST['bouton'];
+    }
+
+    # Si les questions ne sont pas chargées dans la session, on crée un nouveau tableau de questions
+    if (!isset($_SESSION['questions'])) {
+        
+        // On commence par lire le fichier JSON correspondant
+        $json = file_get_contents("questions/".$_SESSION["categorie"].".json");
+        $data = json_decode($json, true);
+        var_dump($data);
+    
+        //On initialise le tableau de questions
+        $questions = array();
+        $random_indexes = array_rand($data[1], 10);
+        foreach ($random_indexes as $index) {
+            $questions[] = $data[1][$index];
+        }
+    
+        //On stocke les questions choisies dans la session
+        $_SESSION['questions'] = json_encode($questions);
+    }
 ?>
 
 <!DOCTYPE html>

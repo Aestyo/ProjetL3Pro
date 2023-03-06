@@ -19,6 +19,13 @@ body{
     text-decoration: none;
 }
 
+h1 {
+    font-family: 'Pally-Bold';
+    font-size: 3.5vw;
+    text-align: center;
+    line-height: 20vh;
+}
+
 textarea:focus, input:focus{
     outline: none;
 }
@@ -113,18 +120,16 @@ nav:hover{
 
 .big {
     width: 30vw;
-    min-width: 350px;
     height: 10vh;
     min-height: 80px;
-    font-size: 40px;
+    font-size: 2vw;
 }
 
 .medium {
     width: 20vw;
-    min-width: 300;
     height: 8vh;
     min-height: 80px;
-    font-size: 35px;
+    font-size: 1.5vw;
 }
 
 .button:hover{
@@ -158,7 +163,7 @@ nav:hover{
 
 .question{
     display: flex;
-    width: 62%;
+    width: 66%;
     height: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -166,7 +171,7 @@ nav:hover{
     padding: 15px;
     justify-content: center;
     align-items: center;
-    font-size: 50px;    
+    font-size: 2.5vw;    
     margin-top: 0vh;
 }
 
@@ -198,13 +203,6 @@ nav:hover{
     background-color: #f1f1f1;
     color: #232F3E;
     border: solid 5px #232F3E ;
-}
-
-h1 {
-    font-family: 'Pally-Bold';
-    font-size: 70px;
-    text-align: center;
-    line-height: 20vh;
 }
 
 @keyframes placeholderClignotte {
