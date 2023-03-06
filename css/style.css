@@ -31,7 +31,7 @@ nav{
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    opacity: 10%;
+    opacity: 50%;
     height: 100px;
     margin-top: 0px;
 }
@@ -73,7 +73,6 @@ nav:hover{
 .majeur{
     font-size: 80px;
     font-family: 'Pally-Medium';
-
 }
 
 .reponse{
@@ -103,7 +102,7 @@ nav:hover{
     color: #232F3E;
     border: solid 5px #232F3E;
     background-color: #f1f1f1;
-    margin-top: 10vh;
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,24 +200,28 @@ nav:hover{
     border: solid 5px #232F3E ;
 }
 
-
-
+h1 {
+    font-family: 'Pally-Bold';
+    font-size: 70px;
+    text-align: center;
+    line-height: 20vh;
+}
 
 @keyframes placeholderClignotte {
     0%{
-        opacity: 10%;
+        opacity: 50%;
     }
     50%{
         opacity: 100%;
     }
     100%{
-        opacity: 10%;
+        opacity: 50%;
     }
 }
 
 @keyframes navbarApparition {
     from{
-        opacity: 20%;
+        opacity: 50%;
         transform-origin: 0px 40px;
     }
     to{

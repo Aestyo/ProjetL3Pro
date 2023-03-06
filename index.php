@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pally.css">
     <script src="js/app.js"></script>
-
 </head>
 
 <body>
 
-    <h1 class="enonce">Choisissez votre catégorie</h1>
+    <h1>Choisissez votre catégorie</h1>
 
     <form>
         <button type="submit" class="button big" formaction="math.html">Mathématiques</button>
