@@ -28,7 +28,7 @@
                 <input type="text" name="reponse" id="reponse" placeholder="| &nbsp Écris ta réponse ici ..." autofocus>
             </div>
 
-            <button type="submit" id="jeReponds">Je réponds !</button>
+            <button type="submit" class="button big">Je réponds !</button>
         </div>
 
     </body>

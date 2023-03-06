@@ -39,10 +39,6 @@
         <script src="js/app.js"></script>
     </head>
 
-    <form action="#" method="post">
-        <input type="submit" name="logout" value="Logout">
-    </form>
-
     <body>
         <div class="main">
             <div class="question">
