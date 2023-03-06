@@ -18,7 +18,7 @@
             <a href="index.html">
                 <li>Accueil</li>
             </a>
-            <a href="math.html">
+            <a href="question_ouverte.php">
                 <li>Mathématiques</li>
             </a>
             <a href="start.html">
@@ -37,7 +37,7 @@
         <button type="submit" id="jeReponds" formaction="index.html">Accueil</button>
     </form>
     <form>
-        <button type="submit" id="jeReponds" formaction="math.html">Mathématiques</button>
+        <button type="submit" id="jeReponds" formaction="question_ouverte.php">Mathématiques</button>
     </form>
     <form>
         <button type="submit" id="jeReponds" formaction="start.php">Histoire-Géographie</button>

@@ -66,7 +66,7 @@ echo $bonne_reponse;
 <body>
     <nav>
         <ul>
-            <a href="question_ouverte.html">
+            <a href="question_ouverte.php">
                 <li>Mathématiques</li>
             </a>
             <a href="image.html">
