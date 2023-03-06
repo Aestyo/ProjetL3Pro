@@ -27,7 +27,7 @@
         </ul>
     </nav>
     <form>
-        <button type="submit" id="jeReponds" formaction="qcm.php">START!</button>
+        <button type="submit" class="button big" formaction="qcm.php">START!</button>
     </form>
     
 </body>

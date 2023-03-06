@@ -94,8 +94,8 @@ echo $iteration;
                 </div>
                 <div class="ligne ligne3">
                     <?php
-                    if ($iteration < 9) echo "<button type='submit' id='jeReponds'>Je réponds !</button>";
-                    else echo "<button type='submit' id='jeReponds'>Fin !</button>";
+                    if ($iteration < 9) echo "<button type='submit' class='button medium'>Je réponds !</button>";
+                    else echo "<button type='submit' class='button medium'>Fin !</button>";
                     ?>
                 </div>
             </form>

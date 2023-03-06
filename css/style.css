@@ -98,11 +98,8 @@ nav:hover{
     font-family: 'Pally-Medium';
 }
 
-#jeReponds{
-    width: 30vw;
-    height: 80px;
+.button {
     font-family: 'Pally-Bold';
-    font-size: 40px;
     color: #232F3E;
     border: solid 5px #232F3E;
     background-color: #f1f1f1;
@@ -115,7 +112,23 @@ nav:hover{
     border-radius: 25px;
 }
 
-#jeReponds:hover{
+.big {
+    width: 30vw;
+    min-width: 350px;
+    height: 10vh;
+    min-height: 80px;
+    font-size: 40px;
+}
+
+.medium {
+    width: 20vw;
+    min-width: 300;
+    height: 8vh;
+    min-height: 80px;
+    font-size: 35px;
+}
+
+.button:hover{
     color: #c7a0d7;
     background-color: #232F3E;
     transition: 0.2s;

@@ -17,13 +17,13 @@
     <h1 class="enonce">Choisissez votre catégorie</h1>
 
     <form>
-        <button type="submit" id="jeReponds" formaction="math.html">Mathématiques</button>
+        <button type="submit" class="button big" formaction="math.html">Mathématiques</button>
     </form>
     <form>
-        <button type="submit" id="jeReponds" formaction="start.php">Histoire-Géo</button>
+        <button type="submit" class="button big" formaction="start.php">Histoire-Géo</button>
     </form>
     <form>
-        <button type="submit" id="jeReponds" formaction="question_ouverte.html">Culture G</button>
+        <button type="submit" class="button big" formaction="question_ouverte.html">Culture G</button>
     </form>
 
 </body>
