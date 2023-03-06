@@ -1,5 +1,5 @@
 <?php
-    include 'nav.html.php';
+    include 'nav.php';
 ?>
 
 <!DOCTYPE html>
@@ -55,13 +55,13 @@
             
             <table class="table">
   <tr>
-    <th><a href="mathematique.html.php">
+    <th><a href="mathematique.php">
                 <li>Jeux de mathématiques</li>
             </a></th>
-    <th><a href="histoire-geo.html.php">
+    <th><a href="histoire-geo.php">
                 <li>Jeux d'histoire et géographie</li>
             </a></th>
-    <th><a href="cult-g.html.php">
+    <th><a href="cult-g.php">
                 <li>Jeux de culture Générale</li>
             </a></th>
   </tr>
@@ -72,6 +72,9 @@
   </tr>
 </table>
         </section>
+        <form>
+        <button type="submit" id="jeReponds" formaction="mathematique.php">START!</button>
+    </form>
 
     </main>
 

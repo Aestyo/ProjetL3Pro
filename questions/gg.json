@@ -1,0 +1,43 @@
+[  
+    {    
+        "nom": "Culture-g",    
+        "nbQuestions": 30  
+    }, 
+    [
+        {
+            "question": "Il est quelle l'heure ?",
+            "reponse1": "Il est 7 H 20",
+            "reponse2": "Il est 19 H 20",
+            "reponse3": "Il est 21 H 20",
+            "reponse4": "Il est 5 H 20"
+        },
+        {
+            "question": "Combien y a-t-il de minutes dans une heure ?",
+            "reponse1": "60 minutes",
+            "reponse2": "100 minutes",
+            "reponse3": "150 minutes",
+            "reponse4": "75 minutes"
+        },
+        {
+            "question": "Quel est le synonyme de joyeux ?",
+            "reponse1": "Heureux",
+            "reponse2": "Mécontent",
+            "reponse3": "Apeurer",
+            "reponse4": "Triste"
+        },
+        {
+            "question": "Quelles sont les parties du corps humain ?",
+            "reponse1": "Le tronc, les jambes et les pieds, les bras et les mains, et la tête",
+            "reponse2": "Les bras et les mains, et la tête",
+            "reponse3": "Les jambes et les pieds, les bras et les mains, et la tête",
+            "reponse4": "Le tronc, les bras et les mains, et la tête"
+        },
+        {
+            "question": "Comment s'appellent les animaux qui ont un squelette articulé ?",
+            "reponse1": " Des vertébrés",
+            "reponse2": "Des ovipares",
+            "reponse3": "Les vivipares",
+            "reponse4": "Pauvre"
+        }
+    ]
+]

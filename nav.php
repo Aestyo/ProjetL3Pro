@@ -10,19 +10,19 @@
 		<body>
 			<nav>
         <ul>
-            <a href="accueil.html.php">
+            <a href="accueil.php">
                 <li>A propos</li>
             </a>
-            <a href="mathematique.html.php">
+            <a href="mathematique.php">
                 <li>Mathématiques</li>
             </a>
-            <a href="histoire-geo.html.php">
+            <a href="histoire-geo.php">
                 <li>Histoire-Géographie</li>
             </a>
-            <a href="cult-g.html.php">
+            <a href="cult-g.php">
                 <li>Culture Générale</li>
             </a>
-            <a href="#">
+            <a href="parent.php">
                 <li>Gérer les questions</li>
             </a>
         </ul>
