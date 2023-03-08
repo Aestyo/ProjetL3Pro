@@ -1,88 +1,54 @@
-[  
-    {    
-        "nom": "Histoire-Géo",    
-        "nbQuestions": 10 
-    }, 
-    [
-        {            
-            "type": "qcm",
-            "question": "De quelle couleur était le cheval blanc d'Henri 4 ?",
-            "reponse1": "Blanc",
-            "reponse2": "Bleu",
-            "reponse3": "Vert",
-            "reponse4": "Gris"
+{
+    "questions": [
+        {
+            "question": "Dans quelle ville se trouve la tour Eiffel ?",
+            "reponses": [
+                "Londres",
+                "Paris",
+                "New York",
+                "Tokyo"
+            ],
+            "bonne_reponse": "Paris"
         },
-        {            
-            "type": "qcm",
-            "question": "Qu'est-ce que je fais ici ?",
-            "reponse1": "Rien",
-            "reponse2": "9",
-            "reponse3": "La réponse D",
-            "reponse4": "La vraie réponse D"
+        {
+            "question": "Qui a écrit le roman 'Les Trois Mousquetaires' ?",
+            "reponses": [
+                "Victor Hugo",
+                "Alexandre Dumas",
+                "Gustave Flaubert",
+                "Marcel Proust"
+            ],
+            "bonne_reponse": "Alexandre Dumas"
         },
-        {            
-            "type": "qcm",
-            "question": "De quelle couleur est le ciel ?",
-            "reponse1": "Pas bleu du tout",
-            "reponse2": "Bleu",
-            "reponse3": "Pas vraiment bleu",
-            "reponse4": "Pas bleu"
+        {
+            "question": "Quelle est la plus haute montagne du monde ?",
+            "reponses": [
+                "Le Kilimandjaro",
+                "L'Everest",
+                "Le Mont-Blanc",
+                "Le Mont-Fuji"
+            ],
+            "bonne_reponse": "L'Everest"
         },
-        {            
-            "type": "qcm",
-            "question": "Est-ce que Guillaume est un doggo ?",
-            "reponse1": "OUI !",
-            "reponse2": "Oui",
-            "reponse3": "Oui",
-            "reponse4": "Oui"
+        {
+            "question": "Quel est le plus grand océan du monde ?",
+            "reponses": [
+                "L'Océan Atlantique",
+                "L'Océan Pacifique",
+                "L'Océan Indien",
+                "L'Océan Arctique"
+            ],
+            "bonne_reponse": "L'Océan Pacifique"
         },
-        {            
-            "type": "qcm",
-            "question": "Quelle température fait-il ?",
-            "reponse1": "19°C",
-            "reponse2": "-59°C",
-            "reponse3": "112°C",
-            "reponse4": "1°C"
-        },
-        {            
-            "type": "qcm",
-            "question": "De quelle couleur était le cheval blanc d'Henri 4 ?",
-            "reponse1": "Blanc",
-            "reponse2": "Bleu",
-            "reponse3": "Vert",
-            "reponse4": "Gris"
-        },
-        {            
-            "type": "qcm",
-            "question": "Qu'est-ce que je fais ici ?",
-            "reponse1": "Rien",
-            "reponse2": "9",
-            "reponse3": "La réponse D",
-            "reponse4": "La vraie réponse D"
-        },
-        {            
-            "type": "qcm",
-            "question": "De quelle couleur est le ciel ?",
-            "reponse1": "Pas bleu du tout",
-            "reponse2": "Bleu",
-            "reponse3": "Pas vraiment bleu",
-            "reponse4": "Pas bleu"
-        },
-        {            
-            "type": "qcm",
-            "question": "Est-ce que Guillaume est un doggo ?",
-            "reponse1": "OUI !",
-            "reponse2": "Oui",
-            "reponse3": "Oui",
-            "reponse4": "Oui"
-        },
-        {            
-            "type": "qcm",
-            "question": "Quelle température fait-il ?",
-            "reponse1": "19°C",
-            "reponse2": "-59°C",
-            "reponse3": "112°C",
-            "reponse4": "1°C"
+        {
+            "question": "Qui a écrit la symphonie 'La Neuvième' ?",
+            "reponses": [
+                "Wolfgang Amadeus Mozart",
+                "Johann Sebastian Bach",
+                "Ludwig van Beethoven",
+                "Frédéric Chopin"
+            ],
+            "bonne_reponse": "Ludwig van Beethoven"
         }
     ]
-]
+}
