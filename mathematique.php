@@ -1,9 +1,10 @@
 <?php
+clearstatcache();
 session_start();
-include 'nav.php';
-$questions = json_decode($_SESSION['questions']);
 
-if (is_null($questions)) {
+include 'nav.php';
+
+if (!isset($_SESSION['questions'])) {
     $json = file_get_contents("questions/maths.json");
     $data = json_decode($json, true);
 
@@ -15,8 +16,9 @@ if (is_null($questions)) {
     $_SESSION['questions'] = json_encode($questions);
 }
 
-$iteration = $_SESSION['iteration'];
-$score = $_SESSION['score'];
+$questions = json_decode($_SESSION['questions']);
+$iteration = $_SESSION['iteration'] ?? 0;
+$score = $_SESSION['score'] ?? 0;
 
 if (is_null($iteration) || $iteration >= count($questions)) {
     $_SESSION['iteration'] = 0;
@@ -25,7 +27,7 @@ if (is_null($iteration) || $iteration >= count($questions)) {
     $score = 0;
 }
 
-if (isset($_POST['valider'])) {
+if (isset($_POST['reponse'])) {
     $reponse = $_POST['reponse'];
     if ($reponse == $questions[$iteration]->bonne_reponse) {
         $score += 1;
@@ -38,14 +40,14 @@ if (isset($_POST['valider'])) {
 if ($iteration >= count($questions)) {
     echo "<form action='#' method='post'>";
     echo "<p>Votre score est de : " . $score . "/" . count($questions) . "</p>";
-    echo "<button type='submit' id='jeReponds'>Retour aux questions</button>";
+    echo "<button type='submit' id='jeReponds'><a href='index.php'>Retour aux menu</a></button>";
     echo "</form>";
     exit;
 }
 
 $bonne_reponse = $questions[$iteration]->bonne_reponse;
-$question = $questions[$iteration]->question;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -60,29 +62,29 @@ $question = $questions[$iteration]->question;
     <div class="main">
         <div class="question">
             <p class="quote" id="question">
-                <?php echo $question ?>
+                <?php echo $questions[$iteration]->question ?>
             </p>
         </div>
 
         <div class="choixMultiple">
             <form action="#" method="post">
-                <label for="reponse">Réponse :</label>
-                <input type="text" id="reponse" name="reponse">
-                <?php if ($iteration < count($questions) - 1) {
-                    echo "<div class='score'>";
-                    echo "<p>Question " . ($iteration + 1) . "/" . count($questions) . "</p>";
-                    echo "<p>Score : " . $score . "</p>";
-                    echo "</div>";
-                    echo "<button type='submit' id='jeReponds' name='valider'>Valider</button>";
-                } else {
-                    echo "<div class='score'>";
-                    echo "<p>Question " . ($iteration + 1) . "/" . count($questions) . "</p>";
-                    echo "<p>Score : " . $score . "</p>";
-                    echo "</div>";
-                    echo "<button type='submit' id='jeReponds' name='valider'>Valider et voir le score</button>";
-                }
-                ?>
+                <div class="ligne ligne1">
+                    <input type="text" name="reponse" required>
+                    <button type="submit">Valider</button>
+                </div>
             </form>
+            <?php if ($iteration < count($questions) - 1) {
+                echo "<div class='score'>";
+                echo "<p>Question " . ($iteration + 1) . "/" . count($questions) . "</p>";
+                echo "<p>Score : " . $score . "</p>";
+                echo "</div>";
+            } else {
+                echo "<div class='score'>";
+                echo "<p>Question " . ($iteration + 1) . "/" . count($questions) . "</p>";
+                echo "<p>Score : " . $score . "</p>";
+                echo "</div>";
+            }
+            ?>
         </div>
     </div>
 </body>

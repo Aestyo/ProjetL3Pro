@@ -32,20 +32,19 @@
 </head>
 
 <body>
+   <?php
+      session_start();
+      if(isset($_SESSION['questions'])){
+         unset($_SESSION['questions']);
+      }
+   ?>
    <nav>
       <ul>
-         <a href="index.php">
-            <li>A propos</li>
-         </a>
-         <a href="mathematique.php">
-            <li>Mathématiques</li>
-         </a>
-         <a href="histoire-geo.php">
-            <li>Histoire-Géographie</li>
-         </a>
-         <a href="cult-g.php">
-            <li>Culture Générale</li>
-         </a>
+         <li><a href="index.php">Accueil</a></li>
+         <li><a href="mathematique.php">Mathématiques</a></li>
+         <li><a href="histoire-geo.php">Histoire-Géographie</a></li>
+         <li><a href="cult-g.php">Culture Générale</a></li>
+         <li><a href="propos.php">A propos</a></li>
       </ul>
    </nav>
 </body>

@@ -1,9 +1,9 @@
 <?php
+clearstatcache();
 session_start();
 include 'nav.php';
-$questions = json_decode($_SESSION['questions']);
 
-if (is_null($questions)) {
+if (!isset($_SESSION['questions'])) {
     $json = file_get_contents("questions/histoire-geo.json");
     $data = json_decode($json, true);
 
@@ -15,8 +15,9 @@ if (is_null($questions)) {
     $_SESSION['questions'] = json_encode($questions);
 }
 
-$iteration = $_SESSION['iteration'];
-$score = $_SESSION['score'];
+$questions = json_decode($_SESSION['questions']);
+$iteration = $_SESSION['iteration'] ?? 0;
+$score = $_SESSION['score'] ?? 0;
 
 if (is_null($iteration) || $iteration >= count($questions)) {
     $_SESSION['iteration'] = 0;
@@ -38,7 +39,7 @@ if (isset($_POST['reponse'])) {
 if ($iteration >= count($questions)) {
     echo "<form action='#' method='post'>";
     echo "<p>Votre score est de : " . $score . "/" . count($questions) . "</p>";
-    echo "<button type='submit' id='jeReponds'>Retour aux questions</button>";
+    echo "<button type='submit' id='jeReponds'><a href='index.php'>Retour aux menu</a></button>";
     echo "</form>";
     exit;
 }
@@ -47,6 +48,7 @@ $bonne_reponse = $questions[$iteration]->bonne_reponse;
 $question_array = array($questions[$iteration]->reponses[0], $questions[$iteration]->reponses[1], $questions[$iteration]->reponses[2], $questions[$iteration]->reponses[3]);
 shuffle($question_array);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
