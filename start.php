@@ -1,17 +1,25 @@
 <?php 
     session_start();
+
+    # Si la catégorie n'est pas définie ou si elle est incorrecte, on redirige vers la page d'accueil
     if(isset($_POST['bouton'])){
-        $_SESSION["categorie"] = $_POST['bouton'];
+        if(in_array($_POST['bouton'], array("mathematiques", "geographie", "culture_generale"))) {
+            $_SESSION["categorie"] = $_POST['bouton'];
+        }else{
+            header("Location: index.php");
+        }
+    }else{
+        header("Location: index.php");
     }
 
     # Si les questions ne sont pas chargées dans la session, on crée un nouveau tableau de questions
     if (!isset($_SESSION['questions'])) {
-        
-        if($_SESSION["categorie"] == "maths"){
-            $_SESSION['questions'] = json_encode(math_question());
+        if($_SESSION["categorie"] == "mathematiques"){
+            $_SESSION['questions'] = json_encode(math_question());  # On crée un tableau de questions mathématiques aléatoires
         } else {
-            $_SESSION['questions'] = json_encode(json_question());
+            $_SESSION['questions'] = json_encode(json_question());  # On crée un tableau de questions à partir des fichiers json
         }
+        $_SESSION['iteration'] = 0;  # On initialise l'itération à 0
         var_dump($_SESSION['questions']);
     }
 
@@ -34,9 +42,9 @@
                 case '÷':
                     $reponse = intdiv($nombre1, $nombre2);
                     break;
-            }
-            $question = "$nombre1 $operation $nombre2";
-            $questions[] = compact('nombre1', 'operation', 'nombre2', 'reponse', 'question');
+            }              
+            $intitule = "$nombre1 $operation $nombre2";
+            $questions[] = compact('nombre1', 'operation', 'nombre2', 'reponse1', 'intitule');
         }
         return $questions;        
     }
@@ -67,10 +75,10 @@
         
         <form>
             <?php
-                if($_SESSION["categorie"] == "maths"){
-                    echo '<button type="submit" class="button big" formaction="open.php">START!</button>';
+                if($_SESSION["categorie"] == "mathematiques"){
+                    echo '<button type="submit" class="button big" formaction="php/qmaths.php">START!</button>';
                 } else {
-                    echo '<button type="submit" class="button big" formaction="qcm.php">START!</button>';
+                    echo '<button type="submit" class="button big" formaction="php/qcm.php">START!</button>';
                 }
             ?>
         </form>

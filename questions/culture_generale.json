@@ -1,0 +1,152 @@
+[
+    {
+        "nom": "Culture-générale",
+        "nbQuestions": 10
+    },
+    [
+        {
+            "type": "qcm",
+            "intitule": "Quelle est la plus grande planète de notre système solaire ?",
+            "reponse1": "Jupiter",
+            "reponse2": "Saturne",
+            "reponse3": "Uranus",
+            "reponse4": "Neptune"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Quelle est la capitale de l'Australie ?",
+            "reponse1": "Canberra",
+            "reponse2": "Melbourne",
+            "reponse3": "Sydney",
+            "reponse4": "Brisbane"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Quel est le plus grand désert du monde ?",
+            "reponse1": "Le Sahara",
+            "reponse2": "Le désert de Gobi",
+            "reponse3": "Le désert d'Atacama",
+            "reponse4": "Le désert d'Arabie"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Qui a écrit le roman 'Les Misérables' ?",
+            "reponse1": "Victor Hugo",
+            "reponse2": "Gustave Flaubert",
+            "reponse3": "Emile Zola",
+            "reponse4": "Charles Baudelaire"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Quel est le plus grand mammifère terrestre ?",
+            "reponse1": "L'éléphant",
+            "reponse2": "Le rhinocéros",
+            "reponse3": "L'hippopotame",
+            "reponse4": "La girafe"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Quelle est la monnaie officielle du Japon ?",
+            "reponse1": "Le yen",
+            "reponse2": "Le won",
+            "reponse3": "Le dollar",
+            "reponse4": "L'euro"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Dans quel pays se trouve le Machu Picchu ?",
+            "reponse1": "Le Pérou",
+            "reponse2": "Le Brésil",
+            "reponse3": "Le Mexique",
+            "reponse4": "L'Argentine"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Qui a peint 'La Joconde' ?",
+            "reponse1": "Léonard de Vinci",
+            "reponse2": "Pablo Picasso",
+            "reponse3": "Vincent Van Gogh",
+            "reponse4": "Claude Monet"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Qui a écrit 'Les Fleurs du Mal' ?",
+            "reponse1": "Charles Baudelaire",
+            "reponse2": "Victor Hugo",
+            "reponse3": "Emile Zola",
+            "reponse4": "Gustave Flaubert"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Quel est le plus haut sommet d'Afrique ?",
+            "reponse1": "Le Kilimandjaro",
+            "reponse2": "Le Mont Kenya",
+            "reponse3": "Le Mont Meru",
+            "reponse4": "Le Toubkal"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Dans quel pays se trouve la ville de Rio de Janeiro ?",
+            "reponse1": "Le Brésil",
+            "reponse2": "L'Argentine",
+            "reponse3": "Le Mexique",
+            "reponse4": "Le Pérou"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Qui a écrit 'Les Trois Mousquetaires' ?",
+            "reponse1": "Alexandre Dumas",
+            "reponse2": "Honoré de Balzac",
+            "reponse3": "Gustave Flaubert",
+            "reponse4": "Victor Hugo"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Quelle est la plus grande île du monde ?",
+            "reponse1": "Groenland",
+            "reponse2": "Madagascar",
+            "reponse3": "Bornéo",
+            "reponse4": "Nouvelle-Guinée"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Qui a écrit '1984' ?",
+            "reponse1": "George Orwell",
+            "reponse2": "Aldous Huxley",
+            "reponse3": "Ernest Hemingway",
+            "reponse4": "Franz Kafka"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Quelle est la plus grande ville du Canada ?",
+            "reponse1": "Toronto",
+            "reponse2": "Montréal",
+            "reponse3": "Vancouver",
+            "reponse4": "Ottawa"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Dans quelle ville italienne se trouve la tour penchée ?",
+            "reponse1": "Pise",
+            "reponse2": "Florence",
+            "reponse3": "Rome",
+            "reponse4": "Venise"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Qui a écrit 'Les Liaisons dangereuses' ?",
+            "reponse1": "Choderlos de Laclos",
+            "reponse2": "Pierre Choderlos",
+            "reponse3": "Jean-Jacques Rousseau",
+            "reponse4": "Denis Diderot"
+        },
+        {
+            "type": "qcm",
+            "intitule": "Quel est le plus long fleuve du monde ?",
+            "reponse1": "Le Nil",
+            "reponse2": "L'Amazone",
+            "reponse3": "Le Yangtsé",
+            "reponse4": "Le Mississippi"
+        }
+    ]
+]

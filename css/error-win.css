@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+
+body{
+    margin: none;
+    padding: none;
+    list-style: none;
+    background-color: #efe5e1;
+}
+
+a{
+    text-decoration: none;
+    color: #f77027;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.asset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+img{
+    width: 50%
+}
+
+h1{
+    font-family: 'Tilt Warp', cursive;
+    font-size: 50px;
+    padding-top: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p{
+    font-family: 'Open-sans', sans-serif;
+    font-size: 24px;
+    opacity: 0.6;
+    margin-top: 0px;
+}
+
+button{
+    font-family: 'Tilt Warp', cursive;
+    font-size: 22px;
+    padding: 5px 15px;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 70px;
+    border-radius: 20px;
+    border: solid 3px #f77027;
+    color: #f77027;
+    cursor: pointer;
+    margin-top: 5vh;
+    background-color: white;
+    text-align: center;
+}
+
+button:hover{
+    background-color: #f77027;
+    color: white;
+}
+
+.return{
+    font-family: 'Tilt Warp', cursive;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: -60px;
+    margin-left: 40px;
+}
