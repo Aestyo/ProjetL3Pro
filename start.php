@@ -23,7 +23,7 @@
     }
 
     function math_question() {
-        $operations = array('+','-','*','÷');
+        $operations = array('+','-','×','÷');
         for ($i = 0; $i < 10; $i++) {
             $operation = $operations[array_rand($operations)];
             $nombre1 = rand(1, 10);
@@ -35,7 +35,7 @@
                 case '-':
                     $reponse1 = $nombre1 - $nombre2;
                     break;
-                case '*':
+                case '×':
                     $reponse1 = $nombre1 * $nombre2;
                     break;
                 case '÷':
