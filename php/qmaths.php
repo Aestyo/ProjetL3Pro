@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-var_dump($_SESSION['questions']);
-
 //On récupère les questions de la session et le numéro de l'itération actuel
 if (isset($_SESSION['questions']) && isset($_SESSION['iteration'])) {
     $iteration = $_SESSION['iteration'];
@@ -11,9 +9,6 @@ if (isset($_SESSION['questions']) && isset($_SESSION['iteration'])) {
 } else {
     header("Location: ../index.php"); 
 }
-
-//On récupère la bonne réponse pour la question en cours d'itération
-//$_SESSION['bonne_reponse'] = $bonne_reponse;
 
 ?>
 <!DOCTYPE html>

@@ -20,7 +20,6 @@
             $_SESSION['questions'] = json_encode(json_question());  # On crée un tableau de questions à partir des fichiers json
         }
         $_SESSION['iteration'] = 0;  # On initialise l'itération à 0
-        var_dump($_SESSION['questions']);
     }
 
     function math_question() {
@@ -31,16 +30,16 @@
             $nombre2 = rand(1, 10);
             switch ($operation) {
                 case '+':
-                    $reponse = $nombre1 + $nombre2;
+                    $reponse1 = $nombre1 + $nombre2;
                     break;
                 case '-':
-                    $reponse = $nombre1 - $nombre2;
+                    $reponse1 = $nombre1 - $nombre2;
                     break;
                 case '*':
-                    $reponse = $nombre1 * $nombre2;
+                    $reponse1 = $nombre1 * $nombre2;
                     break;
                 case '÷':
-                    $reponse = intdiv($nombre1, $nombre2);
+                    $reponse1 = intdiv($nombre1, $nombre2);
                     break;
             }              
             $intitule = "$nombre1 $operation $nombre2";

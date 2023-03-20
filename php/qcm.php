@@ -12,9 +12,6 @@
         header("Location: ../index.php");
     }
 
-    //On récupère la bonne réponse pour la question en cours d'itération
-    //$_SESSION['bonne_reponse'] = $bonne_reponse;
-
 ?>
 
 <!DOCTYPE html>
