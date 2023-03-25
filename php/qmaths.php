@@ -7,7 +7,7 @@ if (isset($_SESSION['questions']) && isset($_SESSION['iteration'])) {
     $questions = json_decode($_SESSION['questions']);
     $question = $questions[$iteration];
 } else {
-    header("Location: ../index.php"); 
+    header("Location: ../index.php");
 }
 
 ?>
@@ -39,14 +39,46 @@ if (isset($_SESSION['questions']) && isset($_SESSION['iteration'])) {
         <form action="error-win.php" method="post">
             <div class="reponse">
                 <input type="text" name="reponse" id="reponse" placeholder="Écrit ta réponse ici!" autofocus>
+                </br>
+                <p class="return" id="countdown"></p>
+                <div class="answer">
+                    <button type='submit'>Je réponds !</button>
+                </div>
+
             </div>
-            <div class="answer">
-                <button type='submit'>Je réponds !</button>
-            </div>
+
+
+
         </form>
     </div>
 
     <img src="../content/img/maths.png" alt="Renard qui fait des maths" class="illustration">
+
+    <script src="../js/script.js"></script>
+
+   <!--********************TIMER********************-->
+    <script>
+        let timeLeft = 15; // temps initial en secondes
+        let countdownEl = document.getElementById("countdown");
+        let answerBtn = document.getElementById("answer-btn");
+
+        function countdown() {
+            timeLeft--;
+            countdownEl.innerHTML = `Temps restant : ${timeLeft}`;
+            if (timeLeft === 0) {
+                clearInterval(timerId);
+                countdownEl.innerHTML = "Temps écoulé !";
+                document.querySelector(".return").style.display = "block";
+
+
+            }
+        }
+
+        // Exemple d'utilisation
+        countdownEl.innerHTML = `Temps restant : ${timeLeft}`;
+        const timerId = setInterval(countdown, 1000);
+    </script>
+
 </body>
 
 </html>
