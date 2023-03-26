@@ -42,7 +42,7 @@ if (isset($_SESSION['questions']) && isset($_SESSION['iteration'])) {
 
         <form>
             <?php
-            echo '<button type="submit" class="button big" formaction="index.php">Retour au menu</button>';
+            echo '<button type="submit" class="button big" formaction="../index.php">Retour au menu</button>';
             ?>
         </form>
     </div>
