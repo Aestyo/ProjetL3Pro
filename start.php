@@ -5,6 +5,7 @@ session_start();
 if (isset($_POST['bouton'])) {
     if (in_array($_POST['bouton'], array("mathematiques", "geographie", "culture_generale"))) {
         $_SESSION["categorie"] = $_POST['bouton'];
+        $_SESSION['points'] = 0;
     } else {
         header("Location: index.php");
     }

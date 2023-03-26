@@ -6,8 +6,7 @@ function countdown() {
     countdownEl.innerHTML = `Temps restant : ${timeLeft} !`;
     if (timeLeft === 0) {
         clearInterval(timerId);
-        countdownEl.innerHTML = "Temps écoulé ! Retente ta chance";
-        document.getElementById("answer-btn").style.display = "none";
+        window.location.href = "../php/error-win.php";
     }
 }
 

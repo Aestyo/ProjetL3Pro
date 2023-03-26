@@ -2,18 +2,9 @@
 session_start();
 
 if (isset($_SESSION['questions']) && isset($_SESSION['iteration'])) {
-    $iteration = $_SESSION['iteration'];
-    $questions = json_decode($_SESSION['questions']);
-    $question = $questions[$iteration];
-    $bonne_reponse = $question->reponse1;
+    $points = $_SESSION['points'];
 } else {
     header("Location: ../index.php");
-}
-
-if ($iteration >= 9) {
-    header("Location: end.php");
-} else {
-    $_SESSION['iteration']++;
 }
 
 ?>
@@ -34,29 +25,24 @@ if ($iteration >= 9) {
     <div class="content">
 
         <?php
-        if ($bonne_reponse == $_POST['reponse']) {
-            $_SESSION['points'] += 1;
+        if ($points > 5) {
             echo "<div class='asset'>";
             echo "<img src='../content/img/win.png' alt=''>";
             echo "</div>";
-            echo "<h1>C'est la bonne réponse !</h1>";
+            echo "<h1>Tu as eu " . $points . " / 10</h1>";
             echo "<p>Tu peux être fier de toi !</p>";
         } else {
             echo "<div class='asset'>";
             echo "<img src='../content/img/error.png' alt='' srcset=''>";
             echo "</div>";
-            echo "<h1>Mauvaise réponse ...</h1>";
-            echo "<p>La bonne réponse était : $bonne_reponse</p>";
+            echo "<h1>Tu as eu " . $points . " / 10</h1>";
+            echo "<p>Tu feras mieux la prochaine fois !</p>";
         }
         ?>
 
         <form>
             <?php
-            if ($_SESSION["categorie"] == "mathematiques") {
-                echo '<button type="submit" class="button big" formaction="qmaths.php">Prochaine question!</button>';
-            } else {
-                echo '<button type="submit" class="button big" formaction="qcm.php">Prochaine question!</button>';
-            }
+            echo '<button type="submit" class="button big" formaction="index.php">Retour au menu</button>';
             ?>
         </form>
     </div>

@@ -1,10 +1,11 @@
-<?php 
-    session_start();
-    session_unset();
+<?php
+session_start();
+session_unset();
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,29 +13,21 @@
     <title>Projet Alternant</title>
     <link rel="stylesheet" href="css/landing.css">
 </head>
+
 <body>
     <nav>
         <div class="logo">
             <img src="content/img/logo.png" alt="logo">
             <h1>Projet alternant</h1>
         </div>
-        <div class="nav-links">
-            <ul>
-                <li><a href="php/qcm.php">QCM</a></li>
-                <li><a href="html/maths.html">WIPMathématiques</a></li>
-                <li><a href="#">WIPQuestions</a></li>
-                <li><a href="html/win.html">WIPPage réussite</a></li>
-                <li><a href="html/error.html">WIPPage erreur</a></li>
-            </ul>
-        </div>
     </nav>
     <div class="landingPage">
         <div class="landingInfo">
             <h1>Projet Alternant</h1>
-            <p>Cette application est un quizz de culture générale pour les enfants. 
-                Les questions portent sur les mathématiques et la géographie. 
-                Il s'agit d'un projet étudiant réalisé en parallèle de nos alternances. 
-                Il propose 3 types de sujets différents, les questions sont modifiables dans 
+            <p>Cette application est un quizz de culture générale pour les enfants.
+                Les questions portent sur les mathématiques et la géographie.
+                Il s'agit d'un projet étudiant réalisé en parallèle de nos alternances.
+                Il propose 3 types de sujets différents, les questions sont modifiables dans
                 les fichiers JSON du dossier questions.</p>
 
             <form action="start.php" method="post">
@@ -48,4 +41,5 @@
         </div>
     </div>
 </body>
+
 </html>
