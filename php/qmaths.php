@@ -53,31 +53,8 @@ if (isset($_SESSION['questions']) && isset($_SESSION['iteration'])) {
     </div>
 
     <img src="../content/img/maths.png" alt="Renard qui fait des maths" class="illustration">
-
-    <script src="../js/script.js"></script>
-
-   <!--********************TIMER********************-->
-    <script>
-        let timeLeft = 15; // temps initial en secondes
-        let countdownEl = document.getElementById("countdown");
-        let answerBtn = document.getElementById("answer-btn");
-
-        function countdown() {
-            timeLeft--;
-            countdownEl.innerHTML = `Temps restant : ${timeLeft}`;
-            if (timeLeft === 0) {
-                clearInterval(timerId);
-                countdownEl.innerHTML = "Temps écoulé !";
-                document.querySelector(".return").style.display = "block";
-
-
-            }
-        }
-
-        // Exemple d'utilisation
-        countdownEl.innerHTML = `Temps restant : ${timeLeft}`;
-        const timerId = setInterval(countdown, 1000);
-    </script>
+    <script src="../js/button.js"></script>
+    <script src="../js/timer.js"></script>
 
 </body>
 

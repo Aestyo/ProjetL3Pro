@@ -53,28 +53,8 @@ if (isset($_SESSION['questions']) && isset($_SESSION['iteration'])) {
     </form>
 
     <img src="../content/img/hist-geo.png" alt="Renard qui voyage" class="illustration" />
-    <script src="../js/script.js"></script>
-
-    <!--********************TIMER********************-->
-    <script>
-    let timeLeft = 15; // temps initial en secondes
-    let countdownEl = document.getElementById("countdown");
-
-    function countdown() {
-        timeLeft--;
-        countdownEl.innerHTML = `Temps restant : ${timeLeft}`;
-        if (timeLeft === 0) {
-            clearInterval(timerId);
-            countdownEl.innerHTML = "Temps écoulé ! Retente ta chance";
-            document.getElementById("answer-btn").style.display = "none";            
-        }
-    }
-
-    // Exemple d'utilisation
-    countdownEl.innerHTML = `Temps restant : ${timeLeft}`;
-    const timerId = setInterval(countdown, 1000);
-</script>
-
+    <script src="../js/button.js"></script>
+    <script src="../js/timer.js"></script>
 
 </body>
 
