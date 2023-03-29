@@ -15,9 +15,9 @@
         {
             "type": "qcm",
             "intitule": "Quel est le plus petit pays du monde ?",
-            "reponse1": "Monaco",
+            "reponse1": "Vatican",
             "reponse2": "Saint-Marin",
-            "reponse3": "Vatican",
+            "reponse3": "Monaco",
             "reponse4": "Malte"
         },
         {
@@ -39,26 +39,26 @@
         {
             "type": "qcm",
             "intitule": "Quel pays est surnommé le pays du Soleil Levant ?",
-            "reponse1": "Chine",
+            "reponse1": "Japon",
             "reponse2": "Corée du Sud",
             "reponse3": "Inde",
-            "reponse4": "Japon"
+            "reponse4": "Chine"
         },
         {
             "type": "qcm",
             "intitule": "Quel pays possède le plus de lacs ?",
-            "reponse1": "États-Unis",
-            "reponse2": "Canada",
+            "reponse1": "Canada",
+            "reponse2": "Êtats-Unis",
             "reponse3": "Finlande",
             "reponse4": "Suède"
         },
         {
             "type": "qcm",
             "intitule": "Quelle est la capitale de l'Australie ?",
-            "reponse1": "Sydney",
+            "reponse1": "Canberra",
             "reponse2": "Melbourne",
             "reponse3": "Perth",
-            "reponse4": "Canberra"
+            "reponse4": "Sydney"
         },
         {
             "type": "qcm",
@@ -71,18 +71,18 @@
         {
             "type": "qcm",
             "intitule": "Quel pays est situé à la fois en Asie et en Europe ?",
-            "reponse1": "Grèce",
-            "reponse2": "Turquie",
+            "reponse1": "Turquie",
+            "reponse2": "Grèce",
             "reponse3": "Kazakhstan",
             "reponse4": "Ukraine"
         },
         {
             "type": "qcm",
             "intitule": "Quelle est la capitale du Brésil ?",
-            "reponse1": "São Paulo",
+            "reponse1": "Brasilia",
             "reponse2": "Rio de Janeiro",
             "reponse3": "Salvador",
-            "reponse4": "Brasília"
+            "reponse4": "São Paulo"
         },
         {
             "type": "qcm",
@@ -95,9 +95,9 @@
         {
             "type": "qcm",
             "intitule": "Quel est le plus grand océan du monde ?",
-            "reponse1": "Océan Atlantique",
+            "reponse1": "Océan Pacifique",
             "reponse2": "Océan Indien",
-            "reponse3": "Océan Pacifique",
+            "reponse3": "Océan Atlantique",
             "reponse4": "Océan Arctique"
         },
         {
@@ -111,42 +111,42 @@
         {
             "type": "qcm",
             "intitule": "Quel est le plus grand continent du monde en superficie ?",
-            "reponse1": "Afrique",
+            "reponse1": "Asie",
             "reponse2": "Amérique",
-            "reponse3": "Asie",
+            "reponse3": "Afrique",
             "reponse4": "Europe"
         },
         {
             "type": "qcm",
             "intitule": "Quelle est la langue officielle du Brésil ?",
-            "reponse1": "Espagnol",
+            "reponse1": "Portugais",
             "reponse2": "Anglais",
-            "reponse3": "Portugais",
+            "reponse3": "Espagnol",
             "reponse4": "Français"
         },
         {
             "type": "qcm",
             "intitule": "Quel pays est le plus peuplé du monde ?",
-            "reponse1": "Inde",
-            "reponse2": "Chine",
+            "reponse1": "Chine",
+            "reponse2": "Inde",
             "reponse3": "États-Unis",
             "reponse4": "Indonésie"
         },
         {
             "type": "qcm",
             "intitule": "Quel est le plus grand lac d'eau douce du monde ?",
-            "reponse1": "Lac Supérieur",
+            "reponse1": "Lac Tanganyika",
             "reponse2": "Lac Baïkal",
-            "reponse3": "Lac Tanganyika",
+            "reponse3": "Lac Supérieur",
             "reponse4": "Lac Victoria"
         },
         {
             "type": "qcm",
             "intitule": "Quelle est la monnaie officielle du Japon ?",
-            "reponse1": "Dollar",
+            "reponse1": "Yen",
             "reponse2": "Euro",
             "reponse3": "Yuan",
-            "reponse4": "Yen"
+            "reponse4": "Dollar"
         },
         {
             "type": "qcm",

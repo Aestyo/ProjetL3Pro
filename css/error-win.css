@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap');
 
 
 body{
@@ -27,15 +27,14 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10vh;
 }
 
 img{
-    width: 50%
+    width: 40%
 }
 
 h1{
-    font-family: 'Tilt Warp', cursive;
+    font-family: 'Alkatra', sans-serif;
     font-size: 50px;
     padding-top: 20px;
     letter-spacing: 1px;
@@ -43,38 +42,33 @@ h1{
 }
 
 p{
-    font-family: 'Open-sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     opacity: 0.6;
     margin-top: 0px;
 }
 
 button{
-    font-family: 'Tilt Warp', cursive;
-    font-size: 22px;
-    padding: 5px 15px;
-    letter-spacing: 1px;
     width: 100%;
-    height: 70px;
-    border-radius: 20px;
-    border: solid 3px #f77027;
+    background-color: #efe5e1;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: solid 2px #f77027;
     color: #f77027;
-    cursor: pointer;
-    margin-top: 5vh;
-    background-color: white;
-    text-align: center;
 }
 
 button:hover{
-    background-color: #f77027;
-    color: white;
+    transform: translateY(-5px);
+    cursor: pointer;
+    transition: 0.3s ease-out;
 }
 
 .return{
     font-family: 'Tilt Warp', cursive;
     font-size: 22px;
     letter-spacing: 1px;
-    margin-top: 40px;
-    margin-bottom: -60px;
-    margin-left: 40px;
+    position: absolute;
+    top: 30px;
+    left: 40px; 
 }

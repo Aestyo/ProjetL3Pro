@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap');
+
+body{
+    margin: none;
+    padding: none;
+    list-style: none;
+    background-color: #efe5e1;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.header h2{
+    margin-top: 35px;
+    font-family: 'Alkatra', sans-serif;
+}
+
+nav img{
+    width: 12%;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 0px;
+    padding-right: 25px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 37%;
+    margin-top: 35px;
+    margin-right: 3%;
+}
+
+li:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+
+
+.hero{
+    display: flex;
+    width: 100%;
+}
+
+.heroInfos{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 160px;
+}
+
+.heroInfos h1{
+    font-family: 'Alkatra', sans-serif;
+    font-size: 60px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width: 90%;
+    text-align: left;
+}
+
+.heroInfos p{
+    font-size: 18px;
+    width: 90%;
+    text-align: left;
+}
+
+.heroInfos a{
+    width: 90%;
+}
+
+.heroInfos button{
+    width: 40%;
+    background-color: #efe5e1;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 30px;
+    border: solid 2px #f77027;
+    color: #f77027;
+}
+
+.heroInfos button:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.heroAsset{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroAsset img{
+    width: 90%;
+}

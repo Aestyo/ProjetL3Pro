@@ -1,10 +1,14 @@
 <?php
 session_start();
 
-# Si la catégorie n'est pas définie ou si elle est incorrecte, on redirige vers la page d'accueil
-if (isset($_POST['bouton'])) {
-    if (in_array($_POST['bouton'], array("mathematiques", "geographie", "culture_generale"))) {
-        $_SESSION["categorie"] = $_POST['bouton'];
+if(isset($_GET['categorie'])){
+    if($_GET['categorie'] == "aleatoire"){
+        $categories = array("mathematiques", "geographie", "culture_generale");
+        $_GET["categorie"] = $categories[array_rand($categories)];
+    }
+
+    if(in_array($_GET['categorie'], array("mathematiques", "geographie", "culture_generale"))){
+        $_SESSION["categorie"] = $_GET['categorie'];
         $_SESSION['points'] = 0;
     } else {
         header("Location: index.php");
@@ -12,6 +16,7 @@ if (isset($_POST['bouton'])) {
 } else {
     header("Location: index.php");
 }
+
 
 # Si les questions ne sont pas chargées dans la session, on crée un nouveau tableau de questions
 if (!isset($_SESSION['questions'])) {
