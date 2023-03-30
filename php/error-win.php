@@ -36,30 +36,29 @@ if ($iteration >= 9) {
     <div class="content">
 
         <?php
-        if(isset($_POST['reponse'])){
+        if (isset($_POST['reponse'])) {
 
 
-        if ($bonne_reponse == $_POST['reponse']) {
-            $_SESSION['points'] += 1;
-            echo "<div class='asset'>";
-            echo "<img src='../content/img/win.png' alt=''>";
-            echo "</div>";
-            echo "<h1>C'est la bonne réponse !</h1>";
-            echo "<p>Tu peux être fier de toi !</p>";
+            if ($bonne_reponse == $_POST['reponse']) {
+                $_SESSION['points'] += 1;
+                echo "<div class='asset'>
+            <img src='../content/img/win.png' alt=''>
+            </div>
+            <h1>C'est la bonne réponse !</h1>
+            <p>Tu peux être fier de toi !</p>";
+            } else {
+                echo "<div class='asset'>
+                <img src='../content/img/error.png' alt='' srcset=''>
+                </div>
+                <h1>Mauvaise réponse ...</h1>
+                <p>La bonne réponse était : $bonne_reponse</p>";
+            }
         } else {
-            echo "<div class='asset'>";
-            echo "<img src='../content/img/error.png' alt='' srcset=''>";
-            echo "</div>";
-            echo "<h1>Mauvaise réponse ...</h1>";
-            echo "<p>La bonne réponse était : $bonne_reponse</p>";
-        }
-
-        } else{
-            echo "<div class='asset'>";
-            echo "<img src='../content/img/error.png' alt='' srcset=''>";
-            echo "</div>";
-            echo "<h1>Pas de réponse ?</h1>";
-            echo "<p>On dirait que tu as manqué de temps ...</p>";
+            echo "<div class='asset'>
+            <img src='../content/img/error.png' alt='' srcset=''>
+            </div>
+            <h1>Pas de réponse ?</h1>
+            <p>On dirait que tu as manqué de temps ...</p>";
         }
         ?>
 
